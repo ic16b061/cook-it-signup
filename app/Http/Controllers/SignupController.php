@@ -59,7 +59,6 @@ class SignupController extends Controller
         }
         $token = shell_exec('cat /var/run/secrets/kubernetes.io/serviceaccount/token');
         $token = trim($token);
-        // $endpoint = 'https://cluster.openshift.gabriel-hq.at:8443';
         $endpoint = 'https://openshift.default.svc.cluster.local';
         $namespace = 'production-'.strtolower($surname).'-'.$subdomain;
 
